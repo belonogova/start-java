@@ -22,6 +22,30 @@ public class VariablesTheme {
 
 	System.out.println("\n\n2. Расчет стоимости товара со скидкой\n");
 
+	int banana = 100;
+	int tomato = 200;
+	int discount = (banana + tomato) / 100 * 11;
+	int sum = (banana + tomato) - discount;
+
+	System.out.println(discount);
+	System.out.println(sum);
+
+	System.out.println("\n\n3. Вывод на консоль слова JAVA\n");
+
+	System.out.println("   J    a  v     v  a");
+	System.out.println("   J   a a  v   v  a a");
+	System.out.println("J  J  aaaaa  V V  aaaaa");
+	System.out.println(" JJ  a     a  V  a     a");
+
+	System.out.println("\n\n4. Отображение min и max значений числовых типов данных\n");
+
+	byte maxByte = 127;
+	short maxShort = 32767;
+	int maxInt = 247483647;
+	long maxLong = 9223372036854775807L;
+
+	maxByte++;
+
 
     }
 }
