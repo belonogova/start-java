@@ -1,2 +1,1 @@
 # startjava
-Privet
