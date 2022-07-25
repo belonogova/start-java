@@ -143,7 +143,9 @@ public class VariablesTheme {
 
 	System.out.println("\n\n9. Отображение количества сотен, десятков и единиц числа\n");
 
-	
+	System.out.println("Число " + number + " содержит \n" + char1 + " сотен \n"
+		+ char2 + " десятков \n"
+		+ char3 + " единиц ");
 	 
     }
 }
