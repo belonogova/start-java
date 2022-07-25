@@ -101,7 +101,49 @@ public class VariablesTheme {
 
 	System.out.println("\n\n6. Вывод символов и их кодов\n");
 
-	
+	int number1 = 35;
+	int number2 = 38;
+	int number3 = 64;
+	int number4 = 94;
+	int number5 = 95;
 
+	System.out.println(number1 + " - " + (char) number1);
+	System.out.println(number2 + " - " + (char) number2);
+	System.out.println(number3 + " - " + (char) number3);
+	System.out.println(number4 + " - " + (char) number4);
+	System.out.println(number5 + " - " + (char) number5);
+
+	System.out.println("\n\n7. Произведение и сумма цифр числа\n");
+
+	int number = 345;
+	int char1 = number / 100;
+	int char2 = number /10 % 10;
+	int char3 = number % 10;
+
+	int summa = char1 + char2 + char3;
+	int product =char1 * char2 * char3;
+
+	System.out.println("Сумма цифр числа " + number + " = " + summa);
+	System.out.println("Произведение цифр числа "+ number + " = " + product);
+
+	System.out.println("\n\n8. Вывод на консоль ASCII-арт Дюка\n");
+
+	char left = 47;
+	char right = 92;
+	char space = 0;
+	char bktLeft = 40;
+	char bktRight = 41;
+	char line = 95;
+
+	System.out.println(" " + space + space + space + space + left + right + space + space + space + space + space);
+	System.out.println(" " + space + space + space + left + space + space + right + space + space + space + space);
+	System.out.println(" " + space + space + left + line + bktLeft + space + bktRight + right + space + space + space);
+	System.out.println(" " + space + left + space + space + space + space + space + space + right + space);
+	System.out.println(" " + left + line + line + line + line + line + left + right + line + right);
+
+	System.out.println("\n\n9. Отображение количества сотен, десятков и единиц числа\n");
+
+	
+	 
     }
 }
