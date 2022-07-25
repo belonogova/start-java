@@ -1,6 +1,6 @@
 public class VariablesTheme {
 	public static void main(String[] args) {
-	System.out.println("1. Создание переменных и вывод их значений на консоль\n");
+	System.out.println(" 1. Создание переменных и вывод их значений на консоль \n");
 
 	byte core = 64;
 	char release = 'W';
@@ -20,7 +20,7 @@ public class VariablesTheme {
 	System.out.println(contact);
 	System.out.println(isTrue);
 
-	System.out.println("\n\n2. Расчет стоимости товара со скидкой\n");
+	System.out.println("\n\n 2. Расчет стоимости товара со скидкой \n");
 
 	int banana = 100;
 	int tomato = 200;
@@ -30,14 +30,14 @@ public class VariablesTheme {
 	System.out.println(discount);
 	System.out.println(sum);
 
-	System.out.println("\n\n3. Вывод на консоль слова JAVA\n");
+	System.out.println("\n\n 3. Вывод на консоль слова JAVA \n");
 
 	System.out.println("   J    a  v     v  a");
 	System.out.println("   J   a a  v   v  a a");
 	System.out.println("J  J  aaaaa  V V  aaaaa");
 	System.out.println(" JJ  a     a  V  a     a");
 
-	System.out.println("\n\n4. Отображение min и max значений числовых типов данных\n");
+	System.out.println("\n\n 4. Отображение min и max значений числовых типов данных \n");
 
 	byte maxByte = 127;
 	short maxShort = 32767;
@@ -70,7 +70,7 @@ public class VariablesTheme {
 		maxLongInc + "\n" +
 		maxLongDec + "\n");
 
-	System.out.println("\n\n5. Перестановка значений переменных\n");
+	System.out.println("\n\n 5. Перестановка значений переменных \n");
 
 	int one = 1;
 	int two = 2;
@@ -79,7 +79,7 @@ public class VariablesTheme {
 	one = two;
 	two =three;
 
-	System.out.println("Перестановка с помощью третьей переменной\n");
+	System.out.println("Перестановка с помощью третьей переменной \n");
 	System.out.println("Исходные значения переменных " + two + " " + one);
 	System.out.println("Новые значения переменных " + one + " " + two);
 
@@ -87,7 +87,7 @@ public class VariablesTheme {
 	two = one - two;
 	one = one -two;
 
-	System.out.println("\nПерестановка с помощью арифметических операций\n");
+	System.out.println("\n Перестановка с помощью арифметических операций \n");
 	System.out.println("Исходные значения переменных " + two + " " + one);
 	System.out.println("Новые значения переменных " + one + " " + two);
 
@@ -95,11 +95,11 @@ public class VariablesTheme {
 	two = two ^ one;
 	one = one ^ two;
 
-	System.out.println("\nПерестановка с помощью побитовой операции\n");
+	System.out.println("\n Перестановка с помощью побитовой операции \n");
 	System.out.println("Исходные значения переменных " + two + " " + one);
 	System.out.println("Новые значения переменных " + one + " " + two);
 
-	System.out.println("\n\n6. Вывод символов и их кодов\n");
+	System.out.println("\n\n 6. Вывод символов и их кодов \n");
 
 	int number1 = 35;
 	int number2 = 38;
@@ -113,7 +113,7 @@ public class VariablesTheme {
 	System.out.println(number4 + " - " + (char) number4);
 	System.out.println(number5 + " - " + (char) number5);
 
-	System.out.println("\n\n7. Произведение и сумма цифр числа\n");
+	System.out.println("\n\n 7. Произведение и сумма цифр числа \n");
 
 	int number = 345;
 	int char1 = number / 100;
@@ -126,7 +126,7 @@ public class VariablesTheme {
 	System.out.println("Сумма цифр числа " + number + " = " + summa);
 	System.out.println("Произведение цифр числа "+ number + " = " + product);
 
-	System.out.println("\n\n8. Вывод на консоль ASCII-арт Дюка\n");
+	System.out.println("\n\n 8. Вывод на консоль ASCII-арт Дюка \n");
 
 	char left = 47;
 	char right = 92;
@@ -141,11 +141,22 @@ public class VariablesTheme {
 	System.out.println(" " + space + left + space + space + space + space + space + space + right + space);
 	System.out.println(" " + left + line + line + line + line + line + left + right + line + right);
 
-	System.out.println("\n\n9. Отображение количества сотен, десятков и единиц числа\n");
+	System.out.println("\n\n 9. Отображение количества сотен, десятков и единиц числа\n");
 
-	System.out.println("Число " + number + " содержит \n" + char1 + " сотен \n"
+	System.out.println("Число " + number + " содержит: \n" + char1 + " сотен \n"
 		+ char2 + " десятков \n"
 		+ char3 + " единиц ");
-	 
+
+	System.out.println("\n\n 10. Преобразование секунд \n");
+
+	int time = 86399;
+
+	int hours = time / 3600;
+	int secondsRemainder = time % 3600;
+	int minutes = secondsRemainder / 60;
+	int seconds = secondsRemainder % 60;
+
+
+	System.out.println(hours + " : " + minutes + " : " + seconds);
     }
 }
