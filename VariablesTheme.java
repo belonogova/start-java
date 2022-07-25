@@ -41,11 +41,67 @@ public class VariablesTheme {
 
 	byte maxByte = 127;
 	short maxShort = 32767;
-	int maxInt = 247483647;
+	int maxInt = 2147483647;
 	long maxLong = 9223372036854775807L;
 
-	maxByte++;
+	byte maxByteInc = maxByte++;
+	short maxShortInc = maxShort++;
+	int maxIntInc = maxInt++;
+	long maxLongInc = maxLong++;
 
+	byte maxByteDec = maxByte--;
+	short maxShortDec = maxShort--;
+	int maxIntDec = maxInt--;
+	long maxLongDec = maxLong--;
+
+	System.out.println(maxByte + "\n" +
+		maxByteInc + "\n" +
+		maxByteDec + "\n");
+
+	System.out.println(maxShort + "\n" +
+		maxShortInc + "\n" +
+		maxShortDec + "\n");
+
+	System.out.println(maxInt + "\n" +
+		maxIntInc + "\n" +
+		maxIntDec + "\n");
+
+	System.out.println(maxLong + "\n" +
+		maxLongInc + "\n" +
+		maxLongDec + "\n");
+
+	System.out.println("\n\n5. Перестановка значений переменных\n");
+
+	int one = 1;
+	int two = 2;
+
+	int three = one;
+	one = two;
+	two =three;
+
+	System.out.println("Перестановка с помощью третьей переменной\n");
+	System.out.println("Исходные значения переменных " + two + " " + one);
+	System.out.println("Новые значения переменных " + one + " " + two);
+
+	one = one + two;
+	two = one - two;
+	one = one -two;
+
+	System.out.println("\nПерестановка с помощью арифметических операций\n");
+	System.out.println("Исходные значения переменных " + two + " " + one);
+	System.out.println("Новые значения переменных " + one + " " + two);
+
+	one = one ^ two;
+	two = two ^ one;
+	one = one ^ two;
+
+	System.out.println("\nПерестановка с помощью побитовой операции\n");
+	System.out.println("Исходные значения переменных " + two + " " + one);
+	System.out.println("Новые значения переменных " + one + " " + two);
+
+	System.out.println("\n\n6. Вывод символов и их кодов\n");
+
+	
 
     }
 }
