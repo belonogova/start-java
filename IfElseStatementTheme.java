@@ -108,5 +108,39 @@
         System.out.println("\n\n 5. Определение буквы, числа или символа по их коду \n");
 
         char  who = '\u0057';
+
+        System.out.println(who + " -это большая буква");
+
+        System.out.println("\n\n 6. Определение суммы вклада и начисленных банком % \n");
+
+        int deposit = 300000;
+
+        if (deposit <= 100000) {
+
+            int percent = deposit / 100 * 5;
+
+            System.out.println("Сумма вклада - " + deposit +
+                "\nНачисленный % - " + percent +
+                "\nИтоговая сумма с % - " + (deposit + percent));
+
+        } else if (deposit > 100000 && deposit <= 300000) {
+
+            int percent = deposit / 100 * 7;
+
+            System.out.println("Сумма вклада - " + deposit +
+                "\nНачисленный % - " + percent +
+                "\nИтоговая сумма с % - " + (deposit + percent));
+        } else if (deposit > 300000) {
+
+            int percent = deposit / 100 * 10;
+
+            System.out.println("Сумма вклада - " + deposit +
+                "\nНачисленный % - " + percent +
+                "\nИтоговая сумма с % - " + (deposit + percent));
+        }
+
+         System.out.println("\n\n 7. Определение оценки по предметам\n");
+
+         
     }
 }
