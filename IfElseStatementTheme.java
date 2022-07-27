@@ -172,6 +172,14 @@
          System.out.println((gradeProgramming + gradeHistory) / 2 + " - average rating");
 
          System.out.println((percentHistory + percentProgramming) / 2 + " - average percent");
-         
+
+         System.out.println("\n\n 8. Расчет прибыли\n");
+
+         int rent = 5000;
+         int costPrice = 9000;
+         int profit = 13000;
+         int netProfit = (profit - costPrice) - rent;
+
+         System.out.println("Прибыль в год: " + netProfit * 12);
     }
 }
