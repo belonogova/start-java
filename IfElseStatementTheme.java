@@ -57,7 +57,7 @@
         if (num % 2 == 0) {
             System.out.println("Число " + num + " четное");
         } else {
-            System.out.println(" Число " + num + " нечетное");
+            System.out.println("Число " + num + " нечетное");
         }
 
         if (num > 0) {
@@ -77,7 +77,7 @@
         System.out.println("Число первое - " + numb1 +
             "\nЧисло второе - " + numb2);
 
-        System.out.println("Одинаковые цифры - ");
+        System.out.println("Одинаковые цифры -");
 
         if (numb1String.charAt(0) == numb2String.charAt(0)) {
             System.out.println(numb1String.charAt(0) + "");
@@ -91,7 +91,7 @@
             System.out.println(numb1String.charAt(2));
         }
 
-        System.out.println("Номера разрядов");
+        System.out.println("Номера разрядов -");
 
         if (numb1String.charAt(0) == numb2String.charAt(0)) {
             System.out.println(3);
@@ -150,7 +150,7 @@
              gradeHistory = 5;
          } else if (percentHistory > 73) {
              gradeHistory = 4;
-         }else if (percentHistory > 60) {
+         } else if (percentHistory > 60) {
              gradeHistory = 3;
          } else if (percentHistory <= 60) {
              gradeHistory = 2;
@@ -158,18 +158,18 @@
 
          if (percentProgramming > 91) {
              gradeProgramming = 5;
-         }else if (percentProgramming > 73) {
+         } else if (percentProgramming > 73) {
              gradeProgramming = 4;
-         }else if (percentProgramming > 60) {
+         } else if (percentProgramming > 60) {
              gradeProgramming = 3;
-         }else if (percentProgramming <= 60) {
+         } else if (percentProgramming <= 60) {
              gradeProgramming = 2;
          }
 
-         System.out.println(gradeHistory + " - History");
-         System.out.println(gradeProgramming + " - Programming");
+         System.out.println(gradeHistory + " - History\n");
+         System.out.println(gradeProgramming + " - Programming\n");
 
-         System.out.println((gradeProgramming + gradeHistory) / 2 + " - average rating");
+         System.out.println((gradeProgramming + gradeHistory) / 2 + " - average rating\n");
 
          System.out.println((percentHistory + percentProgramming) / 2 + " - average percent");
 
@@ -181,5 +181,28 @@
          int netProfit = (profit - costPrice) - rent;
 
          System.out.println("Прибыль в год: " + netProfit * 12);
+
+         System.out.println("\n\n 9. Подсчет количества банкнот \n");
+
+         int number = 567;
+         int hundred = number / 100;
+         int remainderTen = number % 100;
+         int remainderOne = remainderTen % 10;
+         int ten = 0;
+         int one = 0; 
+
+         if (remainderTen <  50) {
+             ten = remainderTen / 10;
+             one = remainderTen % 10;
+         } else if (remainderTen >=50) {
+             ten = 5;
+             one = remainderTen - 50;
+         }
+
+         System.out.println(hundred + " шт - 100$ \n" +
+            ten + " шт - 10$ \n" +
+            one + " шт - 1$");
+
+         System.out.println("Сумма - " + (hundred * 100 + ten * 10 + one));
     }
 }
