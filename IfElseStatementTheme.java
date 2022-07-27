@@ -141,6 +141,37 @@
 
          System.out.println("\n\n 7. Определение оценки по предметам\n");
 
+         int percentHistory = 59;
+         int percentProgramming = 91;
+         int gradeHistory = 0;
+         int gradeProgramming = 0;
+
+         if (percentHistory > 91) {
+             gradeHistory = 5;
+         } else if (percentHistory > 73) {
+             gradeHistory = 4;
+         }else if (percentHistory > 60) {
+             gradeHistory = 3;
+         } else if (percentHistory <= 60) {
+             gradeHistory = 2;
+         }
+
+         if (percentProgramming > 91) {
+             gradeProgramming = 5;
+         }else if (percentProgramming > 73) {
+             gradeProgramming = 4;
+         }else if (percentProgramming > 60) {
+             gradeProgramming = 3;
+         }else if (percentProgramming <= 60) {
+             gradeProgramming = 2;
+         }
+
+         System.out.println(gradeHistory + " - History");
+         System.out.println(gradeProgramming + " - Programming");
+
+         System.out.println((gradeProgramming + gradeHistory) / 2 + " - average rating");
+
+         System.out.println((percentHistory + percentProgramming) / 2 + " - average percent");
          
     }
 }
