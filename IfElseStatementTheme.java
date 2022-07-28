@@ -4,16 +4,16 @@
 
         int age = 33;
         double  height = 1.60;
-        boolean sex = false; 
+        boolean male = false; 
         String name = "Alena";
 
         if (age > 20) {
             System.out.println("Я уже взрослая!");
         } else {
-            System.out.println("Я еще малеькая!");
+            System.out.println("Я еще маленькая!");
         }
 
-        if (sex != true) {
+        if (!male) {
             System.out.println("Я женщина!");
         }
 
@@ -39,31 +39,29 @@
         int num2 = 7;
 
         if (num1 < num2) {
-            System.out.println("max - " + num2 +
-                "\nmin - " + num1);
+            System.out.println("max - " + num2 + " min - " + num1);
         } else {
-            System.out.println("max - " + num1 +
-                "\nmin - " + num2);
+            System.out.println("max - " + num1 + " min - " + num2);
         }
 
         System.out.println("\n\n 3. Работа с числом \n");
 
         int num = 9;
 
-        if (num == 0) {
+        if (num != 0) {
+            System.out.print("Число " + num);
 
-        } 
+            if (num % 2 == 0) {
+                System.out.print(" четное, ");
+            } else {
+                System.out.print(" нечетное, ");
+            }
 
-        if (num % 2 == 0) {
-            System.out.println("Число " + num + " четное");
-        } else {
-            System.out.println("Число " + num + " нечетное");
-        }
-
-        if (num > 0) {
-            System.out.println("Число " + num + " положительное");
-        } else {
-            System.out.println("Число " + num + " отрицательное");
+            if (num > 0) {
+                System.out.print(" положительное");
+            } else {
+                System.out.print(" отрицательное");
+            }
         }
 
         System.out.println("\n\n 4. Поиск одинаковых цифр в числах \n");
@@ -71,73 +69,82 @@
         int numb1 = 235;
         int numb2 = 735;
 
-        String numb1String = numb1 + "";
-        String numb2String = numb2 + "";
-
         System.out.println("Число первое - " + numb1 +
             "\nЧисло второе - " + numb2);
 
+        int numb1Hundrid = numb1 / 100;
+        int numb1Ten = numb1 / 10 % 10;
+        int numb1One = numb1 % 10;
+
+        int numb2Hundrid = numb2 / 100;
+        int numb2Ten = numb2 / 10 % 10;
+        int numb2One = numb2 % 10;
+
         System.out.println("Одинаковые цифры -");
 
-        if (numb1String.charAt(0) == numb2String.charAt(0)) {
-            System.out.println(numb1String.charAt(0) + "");
+        if (numb1Hundrid == numb2Hundrid) {
+            System.out.println("" + numb1Hundrid);
         }
 
-        if (numb1String.charAt(1) == numb2String.charAt(1)) {
-            System.out.println(numb1String.charAt(1) + "");
+        if (numb1Ten == numb2Ten) {
+            System.out.println("" + numb1Ten);
         }
 
-        if (numb1String.charAt(2) == numb2String.charAt(2)) {
-            System.out.println(numb1String.charAt(2));
+        if (numb1One == numb2One) {
+            System.out.println("" +numb1One);
         }
 
         System.out.println("Номера разрядов -");
 
-        if (numb1String.charAt(0) == numb2String.charAt(0)) {
-            System.out.println(3);
+        if (numb1Hundrid == numb2Hundrid) {
+            System.out.println("3");
         }
 
-        if (numb1String.charAt(1) == numb2String.charAt(1)) {
-            System.out.println(2);
+        if (numb1Ten == numb2Ten) {
+            System.out.println("2");
         }
 
-        if (numb1String.charAt(2) == numb2String.charAt(2)) {
-            System.out.println(1);
+        if (numb1One == numb2One) {
+            System.out.println("1");
         }
 
         System.out.println("\n\n 5. Определение буквы, числа или символа по их коду \n");
 
-        char  who = '\u0057';
+        char unknownChar = '\u0057';
+        System.out.println(unknownChar + " это ");
 
-        System.out.println(who + " -это большая буква");
+        if ((int) unknownChar >= 65 && (int) unknownChar <=90) {
+            System.out.println("- Большая буква");
+        } else if ((int) unknownChar >= 97 && (int) unknownChar <=122) {
+            System.out.println("- Маленькая буква");
+        } else if ((int) unknownChar >= 48 && (int) unknownChar <=57) {
+            System.out.println("- цифра");
+        } else {
+            System.out.println("- символ");
+        }
 
         System.out.println("\n\n 6. Определение суммы вклада и начисленных банком % \n");
 
         int deposit = 300000;
+        int percent = 0;
+        int sum = 0;
 
         if (deposit <= 100000) {
-
-            int percent = deposit / 100 * 5;
-
-            System.out.println("Сумма вклада - " + deposit +
-                "\nНачисленный % - " + percent +
-                "\nИтоговая сумма с % - " + (deposit + percent));
+            percent = deposit / 100 * 5;
+            sum = deposit + percent;
 
         } else if (deposit > 100000 && deposit <= 300000) {
+            percent = deposit / 100 * 7;
+            sum = deposit + percent;
 
-            int percent = deposit / 100 * 7;
-
-            System.out.println("Сумма вклада - " + deposit +
-                "\nНачисленный % - " + percent +
-                "\nИтоговая сумма с % - " + (deposit + percent));
         } else if (deposit > 300000) {
-
-            int percent = deposit / 100 * 10;
-
-            System.out.println("Сумма вклада - " + deposit +
-                "\nНачисленный % - " + percent +
-                "\nИтоговая сумма с % - " + (deposit + percent));
+            percent = deposit / 100 * 10;
+            sum = deposit + percent;
         }
+
+        System.out.println("Сумма вклада - " + deposit +
+                "\nНачисленный % - " + percent +
+                "\nИтоговая сумма с % - " + sum);
 
          System.out.println("\n\n 7. Определение оценки по предметам\n");
 
@@ -173,14 +180,21 @@
 
          System.out.println((percentHistory + percentProgramming) / 2 + " - average percent");
 
-         System.out.println("\n\n 8. Расчет прибыли\n");
+         System.out.print("\n\n 8. Расчет прибыли\n");
 
          int rent = 5000;
          int costPrice = 9000;
          int profit = 13000;
          int netProfit = (profit - costPrice) - rent;
+         int profitInYea = netProfit * 12;
 
-         System.out.println("Прибыль в год: " + netProfit * 12);
+         System.out.print("Прибыль за год: ");
+
+         if (profitInYea > 0) {
+             System.out.println("+" + profitInYea);
+         } else {
+            System.out.println(profitInYea);
+         }
 
          System.out.println("\n\n 9. Подсчет количества банкнот \n");
 
