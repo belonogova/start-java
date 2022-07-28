@@ -47,10 +47,9 @@
         System.out.println("\n\n 3. Работа с числом \n");
 
         int num = 9;
+        System.out.print("Число " + num);
 
         if (num != 0) {
-            System.out.print("Число " + num);
-
             if (num % 2 == 0) {
                 System.out.print(" четное, ");
             } else {
@@ -62,6 +61,8 @@
             } else {
                 System.out.print(" отрицательное");
             }
+        } else {
+            System.out.print(" ноль");
         }
 
         System.out.println("\n\n 4. Поиск одинаковых цифр в числах \n");
@@ -83,29 +84,15 @@
         System.out.println("Одинаковые цифры -");
 
         if (numb1Hundrid == numb2Hundrid) {
-            System.out.println("" + numb1Hundrid);
+            System.out.println(numb1Hundrid + " разряд 3");
         }
 
         if (numb1Ten == numb2Ten) {
-            System.out.println("" + numb1Ten);
+            System.out.println(numb1Ten + " разряд 2");
         }
 
         if (numb1One == numb2One) {
-            System.out.println("" +numb1One);
-        }
-
-        System.out.println("Номера разрядов -");
-
-        if (numb1Hundrid == numb2Hundrid) {
-            System.out.println("3");
-        }
-
-        if (numb1Ten == numb2Ten) {
-            System.out.println("2");
-        }
-
-        if (numb1One == numb2One) {
-            System.out.println("1");
+            System.out.println(numb1One + " разряд 1");
         }
 
         System.out.println("\n\n 5. Определение буквы, числа или символа по их коду \n");
@@ -113,11 +100,11 @@
         char unknownChar = '\u0057';
         System.out.println(unknownChar + " это ");
 
-        if ((int) unknownChar >= 65 && (int) unknownChar <=90) {
+        if (unknownChar >= 65 && unknownChar <= 90) {
             System.out.println("- Большая буква");
-        } else if ((int) unknownChar >= 97 && (int) unknownChar <=122) {
+        } else if ( unknownChar >= 97 && unknownChar <= 122) {
             System.out.println("- Маленькая буква");
-        } else if ((int) unknownChar >= 48 && (int) unknownChar <=57) {
+        } else if (unknownChar >= 48 && unknownChar <= 57) {
             System.out.println("- цифра");
         } else {
             System.out.println("- символ");
@@ -131,16 +118,13 @@
 
         if (deposit <= 100000) {
             percent = deposit / 100 * 5;
-            sum = deposit + percent;
-
         } else if (deposit > 100000 && deposit <= 300000) {
             percent = deposit / 100 * 7;
-            sum = deposit + percent;
-
         } else if (deposit > 300000) {
             percent = deposit / 100 * 10;
-            sum = deposit + percent;
         }
+
+        sum = deposit + percent;
 
         System.out.println("Сумма вклада - " + deposit +
                 "\nНачисленный % - " + percent +
@@ -173,20 +157,19 @@
              gradeProgramming = 2;
          }
 
-         System.out.println(gradeHistory + " - History\n");
-         System.out.println(gradeProgramming + " - Programming\n");
+         System.out.println(gradeHistory + " - History \n");
+         System.out.println(gradeProgramming + " - Programming \n");
 
          System.out.println((gradeProgramming + gradeHistory) / 2 + " - average rating\n");
 
          System.out.println((percentHistory + percentProgramming) / 2 + " - average percent");
 
-         System.out.print("\n\n 8. Расчет прибыли\n");
+         System.out.print("\n\n 8. Расчет прибыли \n");
 
          int rent = 5000;
          int costPrice = 9000;
          int profit = 13000;
-         int netProfit = (profit - costPrice) - rent;
-         int profitInYea = netProfit * 12;
+         int profitInYea = (profit - costPrice - rent) * 12;
 
          System.out.print("Прибыль за год: ");
 
