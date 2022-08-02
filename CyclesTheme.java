@@ -42,5 +42,19 @@ public class  CyclesTheme {
         for (int i = max; i >= min; i-- ) {
             System.out.print(i);
         }
+
+        System.out.println("\n\n 3. Вывод реверсивного числа и суммы его цифр \n");
+
+        int number = 1234;
+        int i = 0;
+        int sum = 0;
+
+        while (number > 0) {
+            sum = sum + number % 10;
+            i = number % 10;
+            number = number / 10;
+            System.out.print(i);
+            }
+        System.out.println("\nСумма цифр: " + sum);
     }
 }
