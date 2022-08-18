@@ -127,5 +127,71 @@ public class  CyclesTheme {
         } while (i < 3);
 
         System.out.println("\n\n 7. Отображение ASCII-символов \n");
+
+        for (int j = 0; j < 48; j++) {
+            if (j % 2 != 0) {
+                System.out.printf("%4d%4c%n", j, (char)j);
+            }
+        }
+
+        for (int k = 97; k < 123; k++) {
+            if (k % 2 ==0) {
+                System.out.printf("%4d%4c%n", k, (char)k);
+            }
+        }
+
+        System.out.println("\n\n 8. Проверка, является ли число палиндромом \n");
+
+        int numbPalindrom = 1234321;
+        int palindrom = numbPalindrom;
+        int revers = 0;
+
+        while (numbPalindrom != 0) {
+            int rev = numbPalindrom % 10;
+            revers = revers * 10 + rev;
+            numbPalindrom = numbPalindrom / 10;
+        }
+        if (revers == palindrom) {
+             System.out.println("Число " + palindrom + " являться палиндромом");
+        }
+
+        System.out.println("\n\n 9. Определение, является ли число счастливым \n");
+
+        int numberLiky = 147273;
+        int numberLiky1 = numberLiky;
+        int sumLeft = 0;
+        int sumRight = 0;
+        int numberLeft = numberLiky / 1000;
+        int numberRight = numberLiky1 % 1000;
+        numberLiky = numberLiky * 1000;
+
+        while (numberLiky > 1000) {
+            int num = numberLiky % 10;
+            sumRight += num;
+            numberLiky = numberLiky / 10;
+        }
+
+        System.out.println("Сумма цифр " + numberRight + " = " + sumRight);
+
+        while (numberLiky != 0) {
+            int num = numberLiky % 10;
+            sumLeft += num;
+            numberLiky = numberLiky / 10;
+        }
+        System.out.println("Сумма цифр " + numberLeft + " = " + sumLeft);
+        if (sumLeft == sumRight) {
+            System.out.println("Число счастливое");
+        } else {
+            System.out.println("Число  не счастливое");
+        }
+
+        System.out.println("\n\n 10. Вывод таблицы умножения Пифагора \n");
+
+        for (int n = 1; n < 10; n++) {
+            for (int p = 1; p < 10 ; p++) {
+                System.out.printf("%4d", (n*p));
+            }
+            System.out.println();
+        }
     }
 }
