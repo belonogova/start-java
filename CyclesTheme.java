@@ -1,90 +1,93 @@
-public class  CyclesTheme {
+public class CyclesTheme {
     public static void main(String[] args) {
         System.out.println("\n 1. Подсчет суммы четных и нечетных чисел \n");
 
-        int m = -10;
-        int even = 0;
-        int odd = 0;
+        int startNumber = -10;
+        int evenNumbers = 0;
+        int oddNumbers = 0;
         do {
-            if (m % 2 == 0) {
-                even += m;
+            if (startNumber % 2 == 0) {
+                evenNumbers += startNumber;
             } else {
-                odd += m;
+                oddNumbers += startNumber;
             }
-            m++;
-        } while (m <= 21);
-        System.out.println("в промежутке [-10, 21] сумма четных чисел = " +  even + " а нечетных = " + odd);
+            startNumber++;
+        } while (startNumber <= 21);
+        System.out.println("в промежутке [-10, 21] сумма четных чисел = " +  evenNumbers + " а нечетных = " + oddNumbers);
 
         System.out.println("\n 2. Вывод чисел в интервале (min и max) в порядке убывания \n");
 
         int num1 = 10;
         int num2 = 5;
         int num3 = -1;
-
         int max = 0;
         int min = 0;
 
-        if (num1 > num2 && num1 > num3) { 
+        if (num1 > num2) {
             max = num1;
-        } else if (num2 > num1 && num2> num3) {
-            max =num2;
-        } else if (num3 > num1 && num3 > num2) {
+        }
+        if (num3 > max) {
             max = num3;
         }
-
-        if (num1 < num2 && num1 < num3) {
-            max = num1;
-        } else if (num2 < num1 && num2 < num3) {
-            min = num2;
-        } else if (num3 < num1 && num3 < num2) {
-            min = num3;
+        if (num1 < num2) {
+            min = num1;
         }
+        if (num3 < min) {
+            min =num3;
+        }
+
         for (int i = max; i >= min; i-- ) {
-            System.out.print(i);
+            System.out.print(i + " ");
         }
 
         System.out.println("\n\n 3. Вывод реверсивного числа и суммы его цифр \n");
 
         int number = 1234;
-        int numb = 0;
         int sum = 0;
 
         while (number > 0) {
-            sum = sum + number % 10;
-            numb = number % 10;
+            int digit = number % 10;
+            sum += number % 10;
             number = number / 10;
-            System.out.print(numb);
+            System.out.print(digit);
             }
-        System.out.println("Сумма цифр: " + sum);
+        System.out.println(" Сумма цифр: " + sum);
 
         System.out.println("\n\n 4. Вывод чисел на консоль в несколько строк \n");
 
+        int countNumb = 0;
+
         for (int i = 1; i < 24 ; i += 2) {
-            if (i % 5 == 0) {
+            System.out.printf("%4d",i);
+
+            if (++countNumb % 5 == 0) {
                 System.out.println();
             }
-            System.out.printf(" %d", i);
+        }
+
+        int a = 5 - countNumb % 5;
+        for (int m = 0; m < a; m++) {
+            System.out.printf("%4d", 0);
         }
 
         System.out.println("\n\n 5. Проверка количества единиц на четность \n");
 
-
         int numbers = 3141591;
         int count = 0;
-        int numbers3141591 = numbers;
+        int copySrcNum = numbers;
 
         while (numbers > 0) {
-            int number1 = numbers % 10;
-            if (number1 == 1) {
+            int digit = numbers % 10;
+            if (digit == 1) {
                 count++;
             }
-            numbers = numbers / 10;
+            numbers /= 10;
         }
             
         if (count % 2 == 0) {
-            System.out.println("Число " + numbers3141591 + " содержит " + count + " четное количество единиц");
+            System.out.println("Число " + copySrcNum + " содержит четное количество единиц - " + count);
         }else {
-             System.out.println("Число " + numbers3141591 + " содержит " + count + " нечетное количество единиц");
+             System.out.println("Число " + copySrcNum + " содержит нечетное количество единиц - " + count);
         }
 
         System.out.println("\n\n 6. Отображение фигур в консоли \n");
