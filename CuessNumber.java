@@ -1,21 +1,21 @@
 public class CuessNumber {
 	public static void main(String[] args){
-        int num = 40;
-        int number = 65;
+        int hiddenNumber = 40;
+        int inputNumber = 65;
 
         do {
-            if (number > 0 && number <= 100) {
-                if (number < num) {
+            if (hiddenNumber > 0 && hiddenNumber <= 100) {
+                if (hiddenNumber < inputNumber) {
                     System.out.println("Число меньше загаданного");
-                    number += 5;
+                    hiddenNumber += 5;
                 } else {
                     System.out.println("Число больше загаданного");
-                    number -= 5;
+                    hiddenNumber -= 5;
                 }
             } else {
                 System.out.println("Число не в диапазоне");
             }
-        } while (num != number);
+        } while (inputNumber != hiddenNumber);
         System.out.println("Вы победили!");
     }
 }
