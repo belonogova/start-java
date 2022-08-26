@@ -109,28 +109,32 @@ public class CyclesTheme {
             System.out.println();
             countLines--;
         }
-
-        countLines = 2;
-        do {
-            int countRows = countLines;
-            while (countRows < 3 ) {
-                System.out.print("$");
-                countRows++;
-            }
-            System.out.println();
-            countLines--;
-        } while (countLines > -1);
-
         countLines = 0;
+        int increment = 1;
         do {
-            int countRows = countLines;
-            while (countRows < 2 ) {
+            if (countLines == 3) {
+                increment = -increment;
+            }
+            countLines += increment;
+
+            for (int i = 0; i < countLines; i++) {
                 System.out.print("$");
-                countRows++;
             }
             System.out.println();
-            countLines++;
-        } while (countLines < 3);
+        } while (countLines != 0);
+
+        // countLines = 0;
+        // do {
+        //     if (countLines > 2) {
+        //         int countRows = countLines;
+        //         while (countRows > 2) {
+        //             System.out.print("$");
+        //             countRows--;
+        //         }
+        //         System.out.println();
+        //     }
+        //     countLines--;
+        // } while (countLines > 0);
 
         System.out.println("\n\n 7. Отображение ASCII-символов \n");
 
