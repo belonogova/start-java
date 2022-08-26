@@ -18,19 +18,20 @@ public class CyclesTheme {
         System.out.println("\n 2. Вывод чисел в интервале (min и max) в порядке убывания \n");
 
         int num1 = 10;
-        int num2 = 5;
+        int num2 = 10;
         int num3 = -1;
         int max = 0;
         int min = 0;
 
         if (num1 > num2) {
             max = num1;
+            min = num2;
+        } else {
+            max = num2;
+            min = num1;
         }
         if (num3 > max) {
             max = num3;
-        }
-        if (num1 < num2) {
-            min = num1;
         }
         if (num3 < min) {
             min = num3;
@@ -55,39 +56,38 @@ public class CyclesTheme {
 
         System.out.println("\n\n 4. Вывод чисел на консоль в несколько строк \n");
 
-        num = 0;
+        counter = 0;
+        for (int i = 1; i < 24; i += 2) {
+            System.out.printf("%4d", i);
 
-        for (int i = 1; i < 24 ; i += 2) {
-            System.out.printf("%4d",i);
-
-            if (++num % 5 == 0) {
+            if (++counter % 5 == 0) {
                 System.out.println();
             }
         }
 
-        int a = 5 - num % 5;
-        for (int m = 0; m < a; m++) {
+        int count = 5 - counter % 5;
+        for (int i = 0; i < count; i++) {
             System.out.printf("%4d", 0);
         }
 
         System.out.println("\n\n 5. Проверка количества единиц на четность \n");
 
         num = 3141591;
-        int count = 0;
+        int countOnes = 0;
         int copySrcNum = num;
 
         while (num > 0) {
             int digit = num % 10;
             if (digit == 1) {
-                count++;
+                countOnes++;
             }
             num /= 10;
         }
             
-        if (count % 2 == 0) {
-            System.out.println("Число " + copySrcNum + " содержит четное количество единиц - " + count);
-        }else {
-             System.out.println("Число " + copySrcNum + " содержит нечетное количество единиц - " + count);
+        if (countOnes % 2 == 0) {
+            System.out.println("Число " + copySrcNum + " содержит четное количество единиц - " + countOnes);
+        } else {
+             System.out.println("Число " + copySrcNum + " содержит нечетное количество единиц - " + countOnes);
         }
 
         System.out.println("\n\n 6. Отображение фигур в консоли \n");
@@ -98,46 +98,49 @@ public class CyclesTheme {
             }
             System.out.println();
         }
-        int i = 5;
-        while (i > 0) {
-            int j = i;
-            while (j > 0) {
+
+        int countLines = 5;
+        while (countLines > 0) {
+            int countRows = countLines;
+            while (countRows > 0) {
                 System.out.print("#");
-                j--;
+                countRows--;
             }
             System.out.println();
-            i--;
+            countLines--;
         }
-        i = 2;
+
+        countLines = 2;
         do {
-            int j = i;
-            while (j < 3 ) {
+            int countRows = countLines;
+            while (countRows < 3 ) {
                 System.out.print("$");
-                j++;
+                countRows++;
             }
             System.out.println();
-            i--;
-        } while (i > -1);
-        i = 0;
+            countLines--;
+        } while (countLines > -1);
+
+        countLines = 0;
         do {
-            int j = i;
-            while (j < 2 ) {
+            int countRows = countLines;
+            while (countRows < 2 ) {
                 System.out.print("$");
-                j++;
+                countRows++;
             }
             System.out.println();
-            i++;
-        } while (i < 3);
+            countLines++;
+        } while (countLines < 3);
 
         System.out.println("\n\n 7. Отображение ASCII-символов \n");
 
-        for (i = 0; i < 48; i++) {
+        for (int i = 0; i < 48; i++) {
             if (i % 2 != 0) {
                 System.out.printf("%4d%4c%n", i, (char) i);
             }
         }
 
-        for (i = 97; i < 123; i++) {
+        for (int i = 97; i < 123; i++) {
             if (i % 2 == 0) {
                 System.out.printf("%4d%4c%n", i, (char) i);
             }
@@ -152,7 +155,7 @@ public class CyclesTheme {
         while (palindrom != 0) {
             int digit = palindrom % 10;
             revers = revers * 10 + digit;
-            palindrom = palindrom / 10;
+            palindrom /= 10;
         }
         if (revers == copyPalindrom) {
              System.out.println("Число " + copyPalindrom + " являться палиндромом");
@@ -160,20 +163,18 @@ public class CyclesTheme {
 
         System.out.println("\n\n 9. Определение, является ли число счастливым \n");
 
-        int likyNumber = 147273;
-        int copyLikyNumber = likyNumber;
+        int luckyNumber = 147273;
+        int copyLuckyNumber = luckyNumber;
         int sumLeftDigit = 0;
         int sumRightDigit = 0;
-        int numberLeft = likyNumber / 1000;
-        int numberRight = copyLikyNumber % 1000;
+        int numberLeft = luckyNumber / 1000;
+        int numberRight = copyLuckyNumber % 1000;
         int copyNumberLeft = numberLeft;
         int copyNumberRight = numberRight;
 
-        while (numberLeft != 0 && numberRight != 0) {
-            int digit1 = numberLeft % 10;
-            int digit2 = numberRight % 10;
-            sumLeftDigit += digit1;
-            sumRightDigit += digit2;
+        while (numberLeft != 0) {
+            sumLeftDigit += numberLeft % 10;
+            sumRightDigit += numberRight % 10;
             numberLeft /= 10;
             numberRight /= 10;
         }
@@ -188,18 +189,35 @@ public class CyclesTheme {
 
         System.out.println("\n\n 10. Вывод таблицы умножения Пифагора \n");
 
-        for (i = 1; i < 10; i++) {
+        System.out.println("Вариант 1");
+
+        System.out.printf("%3c%c", (char) 95, (char) 124);
+
+        for (int i = 2; i < 10; i++) {
+            if (i == 2) {
+                System.out.println("__2__3__4__5__6__7__8__9");
+            }
             for (int j = 1; j < 10 ; j++) {
-                if (i * j == 1) {
-                    System.out.printf("%4c%c", (char) 95, (char) 124);
-                } else if (i < 2 && i * j < 10) {
-                    System.out.printf("%4d", (i * j));
-                    System.out.printf("%c", (char) 124);
-                } else if (j < 2 && i * j <10) {
-                    System.out.printf("%4d", (i * j));
-                    System.out.printf("%c", (char) 95);
+                if (j == 1) {
+                    System.out.printf("%3d%c", (i * j), (char) 124);
+                } else {
+                System.out.printf("%3d", (i * j));
                 }
-                System.out.printf("%4d", (i * j));
+            }
+            System.out.println();
+        }
+        System.out.println("Вариант 2");
+
+        System.out.println("   |  2  3  4  5  6  7  8  9");
+        System.out.println(" __|________________________");
+
+        for (int i = 2; i < 10; i++) {
+            for (int j = 1; j < 10 ; j++) {
+                if (j == 1) {
+                    System.out.printf("%3d%c", (i * j), (char) 124);
+                } else {
+                System.out.printf("%3d", (i * j));
+                }
             }
             System.out.println();
         }
