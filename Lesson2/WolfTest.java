@@ -2,11 +2,6 @@ public class WolfTest {
     public static void main(String[] args) {
         Wolf wolfOne = new Wolf();
 
-        String wolfOneSex = "Man";
-        String wolfOneName = "Friend";
-        int wolfOneAge = 3;
-        String wolfOneColor = "grey";
-
         wolfOne.setSex("Women");
         wolfOne.setName("Jim");
         wolfOne.setAge(7);
