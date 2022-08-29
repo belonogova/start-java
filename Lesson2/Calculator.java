@@ -17,8 +17,7 @@ public class Calculator {
         this.mathSign = mathSign;
     }
 
-    public int calc(){
-        int result = 0;
+    public int calc() {
         switch (mathSign) {
             case '+' :
                 return x + y;
@@ -31,9 +30,9 @@ public class Calculator {
             case '%' :
                 return x % y;
             case '^' :
-                result = 1;
+                int result = 1;
                 for (int i = 1; i <= y; i++) {
-                    result = result * x;
+                    result *= x;
                 }
                 return result;
             default :

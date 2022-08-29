@@ -26,11 +26,8 @@ public class CalculatorTest {
 
             do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]:");
-                scanner = new Scanner(System.in);
                 answer = scanner.nextLine();
-            } while (!("yes".equals(answer) || "no".equals(answer)));
+            } while (!"yes".equals(answer) && !"no".equals(answer));
         }
     } 
-    
-   
  }
