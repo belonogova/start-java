@@ -1,46 +1,44 @@
+package Lesson2;
+
 public class Calculator {
-    private int operand1;
-    private int operand2;
-    private String operator;
+    private int x;
+    private int y;
+    private char mathSign;
 
-    public void setOperand1(int operand) {
-        this.operand1 = operand;
+    public void setOperand1(int x) {
+        this.x = x;
     }
 
-    public void setOperand2(int operand) {
-        this.operand2 = operand;
+    public void setOperand2(int y) {
+        this.y = y;
     }
 
-    public void setOperator(String operator) {
-        this.operator = operator;
+    public void setOperator(char mathSign) {
+        this.mathSign = mathSign;
     }
 
     public int calc(){
         int result = 0;
-        switch (operator) {
-            case "+" :
-                result = operand1 + operand2;
-                break;
-            case "-" :
-                result = operand1 - operand2;
-                break;
-            case "*" :
-                result = operand1 * operand2;
-                break;
-            case "/" :
-                result = operand1 / operand2;
-                break;
-            case "%" :
-                result = operand1 % operand2;
-                break;
-            case "^" :
+        switch (mathSign) {
+            case '+' :
+                return x + y;
+            case '-' :
+                return x - y;
+            case '*' :
+                return x * y;
+            case '/' :
+                return x / y;
+            case '%' :
+                return x % y;
+            case '^' :
                 result = 1;
-                for (int i = operand2; i > 0; i--) {
-                    result *= operand1;
-                    break;
+                for (int i = 1; i <= y; i++) {
+                    result = result * x;
                 }
+                return result;
             default :
                 System.out. println("Такой операции не существует");
-        } return result;
+        }
+        return 0;
     }
 }
