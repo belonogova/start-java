@@ -17,24 +17,31 @@ public class JaegerTest {
         System.out.println("Броня: " + jaeger1.getArmor());
 
         jaeger1.move();
-        jaeger1.poverMove();
+        jaeger1.destruction();
         jaeger1.drift();
         jaeger1.selfDestruction();
         jaeger1.scanKaiju();
 
         Jaeger jaeger2 = new Jaeger("Coyote Tango", "Marc-1", "Japan", 280, 2.312, 5, 4);
-        System.out.println("Имя: " + jaeger2.getArmor());
-        System.out.println("Страна: " + jaeger2.getArmor());
-        System.out.println("Скорость: " + jaeger2.getArmor());
+        System.out.println("Имя: " + jaeger2.getName());
+        System.out.println("Страна: " + jaeger2.getOrigin());
+        System.out.println("Скорость: " + jaeger2.getSpeed());
         System.out.println("Броня: " + jaeger2.getArmor());
 
         jaeger2.move();
         jaeger2.drift();
         jaeger2.selfDestruction();
 
-        Jaeger jaeger3 = new Jaeger();
+        Jaeger jaeger3 = new Jaeger("Striker Eureka", "Mark-5", 10, 9);
         System.out.println("Имя: " + jaeger3.getName());
+        System.out.println("Марка: " + jaeger3.getMark());
+        System.out.println("Скорость: " + jaeger3.getSpeed());
 
+        Jaeger jaeger4 = new Jaeger("Gipsy Danger", "United States of America");
+        System.out.println("Имя: " + jaeger4.getName());
+        System.out.println("Страна: " + jaeger4.getOrigin());
 
+        Jaeger jaeger5 = new Jaeger("Crimson Typhoon");
+        System.out.println("Имя: " + jaeger5.getName());
     }
 }

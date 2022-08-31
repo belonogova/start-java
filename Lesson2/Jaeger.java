@@ -9,7 +9,7 @@ public class Jaeger {
     private int armor;
 
     public Jaeger() {
-         
+
     }
 
     public Jaeger(String name) {
@@ -21,25 +21,11 @@ public class Jaeger {
         this.origin = origin;
     }
 
-    public Jaeger(String name, int height, double weight) {
-        this.name = name;
-        this.height = height;
-        this.weight = weight;
-    }
-
     public Jaeger(String name, String mark, int speed, int armor) {
         this.name = name;
         this.mark = mark;
         this.speed = speed;
         this.armor = armor;
-    }
-
-        public Jaeger(String name, String mark, int height, double weight, int speed) {
-        this.name = name;
-        this.mark = mark;
-        this.height = height;
-        this.weight = weight;
-        this.speed = speed;
     }
 
     public Jaeger(String name, String mark, String origin, int height, double weight, int speed, int armor) {
@@ -55,6 +41,7 @@ public class Jaeger {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -67,8 +54,12 @@ public class Jaeger {
         this.lounched = lounched;
     }
 
+    public String getMark() {
+        return mark;
+    }
+
     public void setMark(String mark) {
-        this.mark= mark;
+        this.mark = mark;
     }
 
     public String getOrigin() {
@@ -107,8 +98,8 @@ public class Jaeger {
         System.out.println("Двигаюсь");
     }
 
-    public void poverMove() {
-        System.out.println("Секретный удар");
+    public void destruction() {
+        System.out.println("Уничтожаю Кайдзю");
     }
 
     public boolean drift() {
