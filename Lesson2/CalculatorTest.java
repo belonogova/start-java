@@ -1,4 +1,4 @@
-package Lesson2;
+
 
 import java.util.Scanner;
 
@@ -26,6 +26,7 @@ public class CalculatorTest {
 
             do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]:");
+                scanner.nextLine();
                 answer = scanner.nextLine();
             } while (!"yes".equals(answer) && !"no".equals(answer));
         }
