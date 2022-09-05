@@ -34,8 +34,11 @@ public class GuessNumber {
     }
 
     private void generateNumber() {
+        int min = 1;
+        int max = 100;
+        int diff = max - min;
         Random random = new Random();
-        secretNumber = random.nextInt(100);
+        secretNumber = random.nextInt(diff + 1) + min;
     }
 
     private boolean guess(Player player) {
