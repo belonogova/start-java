@@ -34,20 +34,17 @@ public class GuessNumber {
     }
 
     private void generateNumber() {
-        int min = 1;
-        int max = 100;
-        int diff = max - min;
         Random random = new Random();
-        secretNumber = random.nextInt(diff + 1) + min;
+        secretNumber = random.nextInt(100) + 1;
     }
 
     private boolean guess(Player player) {
-        int name =player.getNumber();
-        if (name > secretNumber) {
-            System.out.println("Число " + name + " больше того, что загадал компьютер");
-        } else if (name < secretNumber) {
-            System.out.println("Число " + name + " меньше того, что загадал компьютер");
+        int num = player.getNumber();
+        if (num > secretNumber) {
+            System.out.println("Число " + num + " больше того, что загадал компьютер");
+        } else if (num < secretNumber) {
+            System.out.println("Число " + num + " меньше того, что загадал компьютер");
         }
-        return name == secretNumber;
+        return num == secretNumber;
     }
 }
