@@ -12,13 +12,7 @@ public class GuessNumber {
         this.player2 = player2;
     }
 
-    public void generateNumber() {
-        Random random = new Random();
-        secretNumber = random.nextInt(101);
-        System.out.println(secretNumber);
-    }
-
-    public void playGame() {
+    public void start() {
         generateNumber();
         do {
             System.out.printf("%s, введите число: ", player1.getName());
@@ -39,12 +33,18 @@ public class GuessNumber {
         } while (true);
     }
 
-    public boolean guess(Player player) {
-        if (player.getNumber() > secretNumber) {
-            System.out.println("Число " + player.getNumber() + " больше того, что загадал компьютер");
-        } else if (player.getNumber() < secretNumber) {
-            System.out.println("Число " + player.getNumber() + " меньше того, что загадал компьютер");
+    private void generateNumber() {
+        Random random = new Random();
+        secretNumber = random.nextInt(100);
+    }
+
+    private boolean guess(Player player) {
+        int name =player.getNumber();
+        if (name > secretNumber) {
+            System.out.println("Число " + name + " больше того, что загадал компьютер");
+        } else if (name < secretNumber) {
+            System.out.println("Число " + name + " меньше того, что загадал компьютер");
         }
-        return player.getNumber() == secretNumber;
+        return name == secretNumber;
     }
 }

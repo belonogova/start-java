@@ -3,7 +3,6 @@ import java.util.Random;
 
 public class GuessNumberTest {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         
         System.out.println("Введите имя первого игрока:");
@@ -14,11 +13,11 @@ public class GuessNumberTest {
         String name2 = scanner.nextLine();
         Player player2 = new Player(name2);
 
-        GuessNumber guessNumber = new GuessNumber(player1, player2);
+        GuessNumber game = new GuessNumber(player1, player2);
 
-        String answer = null;
+        String answer = "";
         do {
-            guessNumber.playGame();
+            game.start();
             do {
                 System.out.print("Хотите продолжить игру? [yes/no]: ");
                 answer = scanner.nextLine();
