@@ -1,7 +1,9 @@
+package com.startjava.Lesson1.final;
+
 public class Calculator {
     public static void main(String[] args) {
         int num1 = 2;
-        int num2 = 3;
+        int num2 = 4;
         char sign = '^';
         int result = 0;
         if (sign == '+') {

@@ -1,3 +1,5 @@
+package com.startjava.Lesson_2_3.animal;
+
 public class Wolf {
 
     private String sex;
@@ -42,7 +44,7 @@ public class Wolf {
     }
 
     public void go() {
-        System.out.println("Идет");
+        System.out.println("идет");
     }
     
     public void sit() {

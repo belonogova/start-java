@@ -1,3 +1,5 @@
+package src.com.startjava.Lesson1.final;
+
 public class GuessNumber {
 	public static void main(String[] args) {
         int hiddenNumber = 40;

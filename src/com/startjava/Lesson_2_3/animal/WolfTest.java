@@ -1,3 +1,5 @@
+package com.startjava.Lesson_2_3.animal;
+
 public class WolfTest {
     public static void main(String[] args) {
         Wolf wolfOne = new Wolf();
@@ -8,7 +10,7 @@ public class WolfTest {
         wolfOne.setColor("Black");
 
         System.out.println("Пол = " + wolfOne.getSex());
-        System.out.println("Имя = " + wolfOne.getName());
+        System.out.println("имя = " + wolfOne.getName());
         System.out.println("Возраст = " + wolfOne.getAge());
         System.out.println("Окрас = " + wolfOne.getColor());
 

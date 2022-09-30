@@ -23,5 +23,6 @@
 hs_err_pid*
 
 # JetBrains IntelliJ IDEA config files
+out
 .idea
 *.iml
